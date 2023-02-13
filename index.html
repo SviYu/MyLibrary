@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700&family=Sassy+Frass&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="open-book.png">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/a7e8d46863.js" crossorigin="anonymous"></script>
+    <title>JS training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/wxnxiano.json" trigger="loop" delay="3000"
+            colors="primary:#911051,secondary:#121331" stroke="50" style="width:100px;height:100px">
+        </lord-icon>
+        <p>Books I want to read</p>
+    </nav>
+
+   
+        <div class="aside-text">
+            <p>I do believe something very magical can happen when you read a good book.</p>
+            <p class="aside-author"><i>J.K. Rowling</i></p>
+        </div>
+  
+
+    <div class="library-info">
+        <p>Books read: <span id="books-read"></span></p>
+        <p>Books unread: <span id="books-unread"></span></p>
+        <p>Total books: <span id="total-books"></span></p>
+    </div>
+    <main class="main-container">
+        <div class="buttons-container">
+            <button class="add-book-modal-btn button" onclick="openModal()">add +</button>
+            <button class="clear-all-btn button" onclick="openDeleteModal()">Clear All</button>
+        </div>
+        <div class="books-list"></div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright®
+            <script>document.write(new Date().getFullYear())</script>
+            by <a href="https://svyuko.netlify.app/">Svyuko</a>
+        </p>
+    </footer>
+
+    <!-- modal form -->
+    <div class="modal">
+
+        <form class="add-book-form">
+            <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+            <h2>Write the details about the book you want to add to your list</h2>
+
+            <div class="block">
+                <label>Title of the book:</label>
+                <input class="title" type="text" name="title" required>
+            </div>
+
+            <div class="block">
+                <label>Author of the book:</label>
+                <input class="author" type="text" name="author" required>
+            </div>
+    
+            <div class="block">
+                <label>Pages in the book:</label>
+                <input class="pages" type="number" min="0" max="999" name="pages" required>
+            </div>
+
+            <div class="status-block">
+                <label>Check if you have already read it?</label>
+                <input class="status" type="checkbox" name="status">
+            </div>
+    
+            <button class="add-book-btn" type="submit">Add the Book</button>
+
+            <!-- <input type="submit" value="Add input" onclick="addBookToLibrary()"> -->
+    
+        </form>
+    </div>
+
+    <!-- Deleting All modal -->
+    <div class="delete-modal-container">
+        <div class="delete-modal">
+            <p class="delete-text">Are you sure you want to delete all books?</p>
+            <div class="delete-buttons-container">
+                <button class="button" onclick="cancelDeleteModal()">Cancel</button>
+                <button class="button" onclick="clearAll()">Delete</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
