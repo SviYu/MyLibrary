@@ -4,7 +4,6 @@ const modal = document.querySelector('.modal');
 const bookList = document.querySelector('.books-list');
 const form = document.querySelector('.add-book-form');
 const deleteModal = document.querySelector('.delete-modal-container');
-const deleteOneModal = document.querySelector('.deleteOne-modal-container')
 const removeBtn = document.querySelector('.remove-btn');
 let myLibrary = JSON.parse(localStorage.getItem('MyLibrary')) || [];
 
@@ -15,8 +14,6 @@ function openModal() {
 function closeModal() {
   modal.classList.remove('active');
 }
-
-
 
 function addBookToLibrary(e) {
   e.preventDefault(); 
@@ -95,11 +92,10 @@ function showLibraryInfo() {
       booksUnread.textContent = unreadCounter;
     }
   }
-
-  console.log('read books', booksRead)
   totalBooks.textContent = myLibrary.length;
 
 }
+
 
 /* Deleting one book */
 function removeOneBook(e) {

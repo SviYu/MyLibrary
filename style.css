@@ -22,11 +22,6 @@ body{
     font-family: 'Sassy Frass', cursive;
     font-size: 6rem;
 }
-.aside{
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 4rem;
-}
 .aside-text{
     float: right;
     max-width: 350px;
@@ -52,7 +47,6 @@ body{
     font-style: italic;
 }
 .library-info p span{
-    font-size: 13px;
     font-weight: bold;
 }
 .main-container{
@@ -267,4 +261,17 @@ input[type="checkbox"]:checked{
     margin-top: 3rem;
     width: 100%;
     display: flex;
+}
+
+/* Stars rating */
+.stars-wrapper{
+    margin-top: 1.5rem;
+}
+.fa-star{
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.fa-star:hover{
+    color: orange;
 }
